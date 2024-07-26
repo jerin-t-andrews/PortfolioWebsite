@@ -1,21 +1,49 @@
 import Image from "next/image";
 import Navbar from "./navbar";
+import Link from "next/link";
+import Project from "./project";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#E7F0DC]">
       <Navbar/>
       
-      <div className="absolute flex left-0 ml-52 w-[800px] ml- mt-60 hover:scale-105 duration-75">
-        <h1 className="absolute w-auto inline-blocks ml-[8rem] -mt-[1rem] font-sans font-bold text-9xl text-[#597445] ">"</h1>
-        <h1 className="w-auto inline-blocks ml-48 font-sans font-bold text-9xl text-[#597445]">
-          HELLO, I'M JERIN!
-        </h1>
-        <h1 className="absolute w-auto inline-blocks ml-[37rem] mt-[15rem] font-sans font-bold text-9xl text-[#597445] ">"</h1>
+      <div className="absolute flex left-0 ml-52 w-[1200px] ml- mt-60">
+        <div className="hover:scale-[1.01] duration-75">
+          <h1 className="absolute w-auto inline-blocks ml-[8rem] -mt-[1rem] font-sans font-bold text-9xl text-[#597445]">"</h1>
+          <h1 className="w-auto inline-blocks ml-48 font-sans font-bold text-8xl text-[#597445]">
+            HELLO, I'M JERIN!
+          </h1>
+          <h1 className="absolute w-auto inline-blocks ml-[63rem] -mt-[7rem] font-sans font-bold text-9xl text-[#597445]">"</h1>
+        </div>
+        
+        <p className="absolute w-auto inline-blocks ml-[13rem] mt-[8rem] font-sans font-bold text-[#658147]">
+          This is my quick bio
+        </p>
+
+        <Link href="https://github.com/DireStorm" target="_blank" rel="noopener noreferrer">
+          <Image
+            className="absolute w-auto mt-[15rem] -ml-[50rem] transform transition-transform hover:-translate-y-1 duration-150"
+            src="/github.png"
+            width="30"
+            height="30"
+            alt=""
+          />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/jerin-t-andrews/" target="_blank" rel="noopener noreferrer">
+          <Image
+            className="absolute w-auto mt-[15rem] -ml-[47rem] transform transition-transform hover:-translate-y-1 duration-150"
+            src="/linkedin.webp"
+            width="30"
+            height="30"
+            alt=""
+          />
+        </Link>
       </div>
-      {/* hover:scale-105 duration-75 */}
+
       <div className="group relative flex left-[600px] mt-40">
-          <div className="z-10 rounded-xl overflow-hidden group-hover:scale-105 duration-75">
+          <div className="z-10 rounded-xl overflow-hidden group-hover:scale-105 duration-100">
             <Image 
               src="/IMG_1894.JPG"
               width={600}
@@ -23,8 +51,16 @@ export default function Home() {
               alt="ME!"
             />
           </div>
-        <p className="z-0 absolute right-[20px] top-[20px] w-[600px] h-[600px] rounded-xl bg-[#658147] transform transition-transform group-hover:scale-105 group-hover:translate-x-10 hover:translate-y-10 duration-75 "></p>
+        <p className="z-0 absolute right-[20px] top-[20px] w-[600px] h-[600px] rounded-xl bg-[#658147] transform transition-transform group-hover:scale-105 duration-100 group-hover:translate-x-10"></p>
       </div>
+
+      <div className="relative flex w-screen justify-center top-[30rem] mb-[30rem]">
+        <div className="-ml-100">
+          <Project path="/github.png"/>
+        </div>
+      </div>
+
+
     </main>
   );
 }
