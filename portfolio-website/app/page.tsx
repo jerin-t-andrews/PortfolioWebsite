@@ -5,7 +5,7 @@ import Project from "./project";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#E7F0DC]">
+    <main className="flex min-h-screen flex-col w-screen items-center justify-between p-24 bg-[#E7F0DC]">
       <Navbar/>
       
       <div className="absolute flex left-0 ml-52 w-[1200px] ml- mt-60">
@@ -54,10 +54,35 @@ export default function Home() {
         <p className="z-0 absolute right-[20px] top-[20px] w-[600px] h-[600px] rounded-xl bg-[#658147] transform transition-transform group-hover:scale-105 duration-100 group-hover:translate-x-10"></p>
       </div>
 
-      <div className="relative flex w-screen justify-center top-[30rem] mb-[30rem]">
-        <div className="-ml-100">
+      <div className="relative flex w-screen justify-around top-[30rem] mb-[30rem]">
+        <div className="">
           <Project path="/github.png"/>
         </div>
+
+        <p className="text-black relative right-[15rem]">
+          Text
+        </p>
+      </div>
+
+      <div className="relative flex w-screen justify-around top-[10rem] mb-[30rem]">
+        <p className="text-black relative">
+          Text
+        </p>
+
+        <div className="">
+          <Project path="/github.png"/>
+        </div>
+
+      </div>
+
+      <div className="relative flex w-screen justify-around -top-[10rem] mb-[20rem]">
+        <div className="">
+          <Project path="/github.png"/>
+        </div>
+
+        <p className="text-black relative right-[15rem]">
+          Text
+        </p>
       </div>
 
 

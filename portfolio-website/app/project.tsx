@@ -4,6 +4,7 @@ interface IProps {
     path : string;
 }
 
+// Come back to this later to make dynamic Project Components
 export default function Project(props : IProps) {    
     // Can attempt this with classnames library or merging (attempt later)
     // console.log(`ml-[${props.ml}rem] mt-[${props.mt}rem]`);
@@ -12,15 +13,11 @@ export default function Project(props : IProps) {
     // const combinedClass = mlClass + mtClass;
 
     return (
-        // "flex w-screen justify-center "
-        <div className={`relative flex w-screen justify-center`}>
             <Image
-                className="-ml-[100rem]"
                 src={props.path}
                 width = {100}
                 height = {100}
                 alt = ""
             />
-        </div>
     );
 }
